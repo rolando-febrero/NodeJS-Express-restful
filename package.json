@@ -1,0 +1,13 @@
+{
+  "name": "Node-APIs",
+  "version": "0.0.1",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.12.0",
+    "express": "^4.8.7",
+    "lodash": "^4.17.2",
+    "mssql": "^3.3.0",
+    "mysql": "^2.5.5",
+    "seriate": "^0.8.0"
+  }
+}
