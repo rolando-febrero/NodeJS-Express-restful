@@ -6,7 +6,7 @@
 
 ##Installation
 
-* Install dependencies : npm install  , mssql
+* Install dependencies : npm install 
 * Start the server : node server.js
 
 
