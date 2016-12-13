@@ -38,7 +38,7 @@ app.get('/hotel',function(req,res){
 
     sql.setDefaultConfig( config );
     sql.execute( {
-        query: "select * from dat_ProdLogger"
+        query: "select * from tableName"
     } ).then( function( results ) {
         data["error"] = 0;
         data["Logs"] = results;
@@ -61,7 +61,7 @@ app.get('/hotel/office/:id',function(req,res){
     var id = req.params.id
     sql.setDefaultConfig( config );
     sql.execute( {
-        query: "select * from dat_ProdLogger where OfficeID = " + id
+        query: "select * from tableName where OfficeID = " + id
     } ).then( function( results ) {
         data["error"] = 0;
         data["Logs"] = results;
@@ -84,7 +84,7 @@ app.get('/hotel/date/:id',function(req,res){
     var id = req.params.id
     sql.setDefaultConfig( config );
     sql.execute( {
-        query: "select * from dat_ProdLogger where CommandSentDate LIKE '" + id + "%'"
+        query: "select * from tableName where CommandSentDate LIKE '" + id + "%'"
     } ).then( function( results ) {
         data["error"] = 0;
         data["Logs"] = results;
@@ -103,7 +103,7 @@ app.post('/hotel',function(req,res){
     var token = req.headers.token;
     var secretToken = properties.token;
     var _ = require('lodash'),
-        sqlStmt = "INSERT INTO dat_ProdLogger (OfficeID, Agent, CommandSent, HostResponse, CommandSentDate, CommandReceivedDate)"+
+        sqlStmt = "INSERT INTO tableName (OfficeID, Agent, CommandSent, HostResponse, CommandSentDate, CommandReceivedDate)"+
     "Values( '${officeID}', '${agent}', '${commandSent}', '${hostResponse}', '${commandSentDate}', '${commandReceivedDate}')",
     object = {
         officeID: req.body.OfficeID,
