@@ -11,7 +11,7 @@
 
 ##Notes
 
-*It needs a SQL database, please see/replace the code in properties.js for database configuration and
+* It needs a SQL database, please see/replace the code in properties.js for database configuration and
 * in server.js/index.js(backup) modify table and column names accordingly
 
 
