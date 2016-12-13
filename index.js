@@ -38,7 +38,7 @@ app.get('/hotel',function(req,res){
 
     sql.setDefaultConfig( config );
     sql.execute( {
-        query: "select * from dat_ProdLogger"
+        query: "select * from tableName"
     } ).then( function( results ) {
         data["error"] = 0;
         data["Logs"] = results;
